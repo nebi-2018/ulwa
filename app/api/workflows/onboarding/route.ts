@@ -40,7 +40,6 @@ export const { POST } = serve<InitialData>(async (context) => {
   const { email, fullName } = context.requestPayload;
 
   // Welcome email
-
   await context.run("new-signup", async () => {
     await sendEmail({
       email,
